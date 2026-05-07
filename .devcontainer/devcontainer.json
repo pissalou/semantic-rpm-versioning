@@ -1,0 +1,20 @@
+{
+	"name": "RPM Build Workspace",
+  "image": "jitakirin/rpmbuild",
+	"remoteUser": "builder",
+	"features": {
+		"ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
+			"packages": "gh,git"
+		}
+	},
+	// Use 'postCreateCommand' to log in to GitHub
+	"postCreateCommand": "gh --version",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools", // If needed
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}
